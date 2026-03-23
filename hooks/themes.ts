@@ -8,3 +8,8 @@ const { theme, problems } = makeColors({
   contrast: 'more',
   roles: { accent: '#9a9a9a', danger: '#e0564a', success: '#7fb069', warning: '#e0a83a', pro: '#b0b0b0' },
   dark: {
+    gray: {
+      anchors: {
+        'surface-0': '#000000',
+        'surface-1': '#050505',
+        'surface-2': '#0a0a0a',
