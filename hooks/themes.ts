@@ -13,3 +13,8 @@ const { theme, problems } = makeColors({
         'surface-0': '#000000',
         'surface-1': '#050505',
         'surface-2': '#0a0a0a',
+        'surface-3': '#111111',
+        'text-primary': '#ffffff',
+        'text-secondary': '#d8d8d8',
+        'text-muted': '#a8a8a8',
+      },
