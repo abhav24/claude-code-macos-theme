@@ -18,3 +18,8 @@ const { theme, problems } = makeColors({
         'text-secondary': '#d8d8d8',
         'text-muted': '#a8a8a8',
       },
+    },
+  },
+})
+
+export const EMBER = { label: 'Ember', colors: theme, problems }
