@@ -24,3 +24,16 @@ const glows = SHADES.map(
   (c, i) =>
     `<radialGradient id="k${i}"><stop offset="0" stop-color="#eaf6ff"/><stop offset="0.18" stop-color="${c}"/><stop offset="0.45" stop-color="${c}" stop-opacity="0.35"/><stop offset="1" stop-color="${c}" stop-opacity="0"/></radialGradient>`,
 ).join('')
+
+const embers = Array.from({ length: COUNT }, () => {
+  // 70% along the sides, 30% through the middle.
+  const zone = rand()
+  const x = zone < 0.35 ? r(0, W * 0.3) : zone < 0.7 ? r(W * 0.7, W) : r(W * 0.3, W * 0.7)
+  const big = rand() < 0.18
+  // Radius includes the glow halo, so it's ~4x the visible core.
+  const size = big ? r(14, 22) : r(6, 12)
+  const dur = r(10, 22)
+  const delay = -r(0, dur)
+  const drift = r(-120, 120)
+  const peak = r(0.65, 1)
+  const shade = Math.floor(rand() * SHADES.length)
