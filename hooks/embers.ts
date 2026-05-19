@@ -37,3 +37,16 @@ const embers = Array.from({ length: COUNT }, () => {
   const drift = r(-120, 120)
   const peak = r(0.65, 1)
   const shade = Math.floor(rand() * SHADES.length)
+  return `<circle class="e" cx="${f(x)}" cy="${H + 30}" r="${f(size)}" fill="url(#k${shade})" style="--d:${f(dur)}s;--dl:${f(delay)}s;--dx:${f(drift)}px;--o:${peak.toFixed(2)}"/>`
+}).join('')
+
+export const EMBERS_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice">
+<defs>
+${glows}
+<radialGradient id="gl" cx="0" cy="1" r="0.8"><stop offset="0" stop-color="#5aa8ff" stop-opacity="0.32"/><stop offset="0.5" stop-color="#2f6ad0" stop-opacity="0.11"/><stop offset="1" stop-color="#000000" stop-opacity="0"/></radialGradient>
+<radialGradient id="gr" cx="1" cy="1" r="0.8"><stop offset="0" stop-color="#5aa8ff" stop-opacity="0.28"/><stop offset="0.5" stop-color="#2f6ad0" stop-opacity="0.09"/><stop offset="1" stop-color="#000000" stop-opacity="0"/></radialGradient>
+<linearGradient id="gb" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#5a9cff" stop-opacity="0.16"/><stop offset="0.35" stop-color="#5a9cff" stop-opacity="0"/></linearGradient>
+</defs>
+<style>
+.e{opacity:0;will-change:transform,opacity;animation:rise var(--d) linear var(--dl) infinite}
+@keyframes rise{
