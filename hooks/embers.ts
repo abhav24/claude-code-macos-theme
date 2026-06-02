@@ -50,3 +50,17 @@ ${glows}
 <style>
 .e{opacity:0;will-change:transform,opacity;animation:rise var(--d) linear var(--dl) infinite}
 @keyframes rise{
+0%{transform:translate(0,0);opacity:0}
+8%{opacity:var(--o)}
+50%{transform:translate(var(--dx),-540px)}
+75%{opacity:calc(var(--o)*0.7)}
+100%{transform:translate(calc(var(--dx)*-0.5),-1090px);opacity:0}
+}
+@media (prefers-reduced-motion:reduce){.e{animation:none}}
+</style>
+<rect width="${W}" height="${H}" fill="#000000"/>
+<rect width="${W}" height="${H}" fill="url(#gl)"/>
+<rect width="${W}" height="${H}" fill="url(#gr)"/>
+<rect width="${W}" height="${H}" fill="url(#gb)"/>
+${embers}
+</svg>`
