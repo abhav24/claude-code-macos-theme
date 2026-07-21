@@ -14,3 +14,9 @@ export const register: Register = on => {
       colors: EMBER.colors,
       backdrop: { scene: SCENE, glass: { blur: 0, tint: '#000000', opacity: 0 } },
     })
+    if (!set.isDrawn) $.ui.status(set.reason)
+
+    return next(e)
+  })
+
+  on('ui.render', { component: 'Backdrop' }, ($, e, next) => {
