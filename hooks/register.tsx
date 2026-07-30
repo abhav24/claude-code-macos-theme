@@ -20,3 +20,9 @@ export const register: Register = on => {
   })
 
   on('ui.render', { component: 'Backdrop' }, ($, e, next) => {
+    if ((e.surface !== 'desktop' && e.surface !== 'mobile') || e.props.scene !== SCENE) return next(e)
+
+    const { Svg } = $.ui.resolve(e)
+    return <Svg source={EMBERS_SVG} alt="Glowing blue embers rising over black" isInteractive />
+  })
+}
