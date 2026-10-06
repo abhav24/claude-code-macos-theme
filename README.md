@@ -14,3 +14,11 @@ The theme draws in the Claude desktop and mobile apps. The terminal and editor i
 At the prompt of a Claude Code terminal session:
 
 ```
+/plugin install theme-pack --marketplace abhav24/claude-code-macos-theme
+```
+
+Answer `y` to add the marketplace, then pick a scope (user is first; press Enter).
+
+From a shell:
+
+```bash
