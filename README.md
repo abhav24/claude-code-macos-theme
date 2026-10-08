@@ -22,3 +22,11 @@ Answer `y` to add the marketplace, then pick a scope (user is first; press Enter
 From a shell:
 
 ```bash
+claude plugin install theme-pack --marketplace abhav24/claude-code-macos-theme
+```
+
+In the desktop app, where `/plugin` doesn't run: click **+** next to the prompt box, then **Plugins**, **Add marketplace** with `abhav24/claude-code-macos-theme`, then **Add plugin**.
+
+Start a new session afterwards to see it.
+
+## Customize
