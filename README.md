@@ -30,3 +30,11 @@ In the desktop app, where `/plugin` doesn't run: click **+** next to the prompt 
 Start a new session afterwards to see it.
 
 ## Customize
+
+- `hooks/themes.ts`: the interface colors (surfaces, text, accent).
+- `hooks/embers.ts`: the backdrop. Change `SHADES` for the ember colors, `COUNT` for how many there are, and the `dur` range for how fast they rise.
+- `hooks/register.tsx`: how see-through the panels are over the backdrop (`glass`).
+
+## License
+
+MIT
