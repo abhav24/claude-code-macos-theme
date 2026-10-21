@@ -12,7 +12,7 @@ export const register: Register = on => {
 
     const set = await $.theme.set({
       colors: EMBER.colors,
-      backdrop: { scene: SCENE, glass: { blur: 0, tint: '#000000', opacity: 0 } },
+      backdrop: { scene: SCENE, glass: { blur: 10, tint: '#000000', opacity: 0.3 } },
     })
     if (!set.isDrawn) $.ui.status(set.reason)
 
